@@ -4,8 +4,6 @@
         return{
         canvas: null,
         context: null,
-        startX: 0,
-        startY: 0,
         practicalArray: [],
         }
     },
