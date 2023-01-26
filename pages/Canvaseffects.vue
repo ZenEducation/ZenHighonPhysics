@@ -1,0 +1,3 @@
+<template>
+  <CanvasParticals> </CanvasParticals>
+</template>
