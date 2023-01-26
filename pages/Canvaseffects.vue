@@ -1,3 +1,5 @@
 <template>
-  <CanvasParticals> </CanvasParticals>
+  <!-- <CanvasParticals> </CanvasParticals> -->
+  <ConstellationEffect />
+  <!-- <RainbowEffect /> -->
 </template>
