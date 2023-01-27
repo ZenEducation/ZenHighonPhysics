@@ -1,5 +1,9 @@
 <template>
-  <div>
+ <!---<div>
     <NuxtPage />
   </div>
+-->
+<index/>
+<FullScreenScroll/>
+
 </template>
