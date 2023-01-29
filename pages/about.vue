@@ -1,0 +1,3 @@
+<template>
+  <FloatingAvatar> </FloatingAvatar>
+</template>

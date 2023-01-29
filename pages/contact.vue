@@ -1,6 +1,6 @@
 <template>
   <div class="bg-gray-900 text-white flex justify-center text-lg">
-    <h1>Hello from My Page</h1>
+    <h1>Hello from the Contact Page</h1>
   </div>
 </template>
 
