@@ -11,6 +11,7 @@
     }
   },
   mounted() {
+    console.log("asdf ");
     this.calculateSectionOffsets();
     console.log(this.offsets);
     window.addEventListener('sccroll', this.handleMouseWheelDOM);     
