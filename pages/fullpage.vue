@@ -1,3 +1,3 @@
 <template>
-  <FullPageScroll></FullPageScroll>
+  <SectionScroll></SectionScroll>
 </template>
