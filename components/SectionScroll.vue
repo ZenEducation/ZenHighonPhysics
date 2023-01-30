@@ -71,53 +71,68 @@
     }
   }, 
   
-    name: 'FullScreenScroll',  
+    name: 'SectionScroll',  
   }
 </script>
 
+
 <template>
-   <div class="overflow-hidden">
-    <div class="fixed inset-3">
-    <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l left-0 right-0"
-    v-on:click="moveDown" >
-    Prev
-    </button>
-    <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-r"
-    v-on:click="moveUp">
-        Next
-    </button>
-    </div>
-    
-    <section class="h-screen flex justify-center items-center flex-col bg-cyan-600">
-      <h1 class="font-bold text-2xl">Vue.js </h1>
-    </section>
+    <div class="overflow-hidden">
+        <div class="fixed inset-3">
+        <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l left-0 right-0"
+        v-on:click="moveDown" >
+        Prev
+        </button>
+        <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-r"
+        v-on:click="moveUp">
+            Next
+        </button>
+        </div>
 
-    <section class="w-1/2 h-screen flex justify-center items-center flex-col bg-yellow-600">
-      <h1 class="font-bold text-2xl">Vue.js Fullpage Scroll</h1>
-    </section>
-
-    <section class="w-1/2 h-screen flex justify-center items-center flex-col bg-yellow-500">
-      <h1 class="font-bold text-2xl">aefdh</h1>
-    </section>
-
-    <section class="w-1/2 h-screen flex justify-center items-center flex-col bg-yellow-400">
-      <h1 class="font-bold text-2xl">xfg bnh</h1>
-    </section>
-
-
-
-    
-
-    
-    
-    </div>
-</template>
+     
+</div>
+</template> 
 
 <style scoped>
-
 .welcome-title{
-  height: 200vh;
+  height: 300vh;
   display: flex;
   justify-content: center;
 }
+.about-title{
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+.about-pages{
+  width: 50%;
+}
+.about-pages section{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.about-pages section p{
+  width: 80%;
+  font-size: 18px;
+  line-height: 30px;
+}
+.about-pages section:nth-child(1){
+  background-color:rgb(212, 241, 138) ;
+}
+.about-pages section:nth-child(2){
+  background-color:rgb(191, 242, 80) ;
+}
+.about-pages section:nth-child(3){
+  background-color:rgb(134, 200, 34) ;
+}
+.about-pages div:nth-child(4){
+  background-color:rgb(209, 230, 22) ;
+}
+
 </style>
