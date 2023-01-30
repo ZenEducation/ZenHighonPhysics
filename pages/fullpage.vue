@@ -1,0 +1,3 @@
+<template>
+  <FullPageScroll></FullPageScroll>
+</template>
