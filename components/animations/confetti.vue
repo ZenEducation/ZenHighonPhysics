@@ -1,5 +1,5 @@
 <template>
-  <h1 class="office-banner">IT IS YOUR BIRTHDAY.</h1>
+  <h1 class="office-banner">Random Celebrations!</h1>
 </template>
 
 <script>
@@ -14,20 +14,29 @@ export default {
   },
   methods: {
     frame() {
-      confetti({
-        particleCount: 2,
-        angle: 60,
-        spread: 55,
-        origin: { x: 0 },
-        colors: this.colors,
-      });
-      confetti({
-        particleCount: 2,
-        angle: 120,
-        spread: 55,
-        origin: { x: 1 },
-        colors: this.colors,
-      });
+      confetti(
+        JSON.parse(
+          JSON.stringify({
+            particleCount: 2,
+            angle: 60,
+            spread: 55,
+            origin: { x: 0 },
+            colors: this.colors,
+          })
+        )
+      );
+
+      confetti(
+        JSON.parse(
+          JSON.stringify({
+            particleCount: 2,
+            angle: 120,
+            spread: 55,
+            origin: { x: 1 },
+            colors: this.colors,
+          })
+        )
+      );
 
       if (Date.now() < Date.now() + 15000) {
         requestAnimationFrame(this.frame);
