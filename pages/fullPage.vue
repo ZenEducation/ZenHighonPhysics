@@ -1,8 +1,5 @@
 <template>
-  <div class="bg-gray-900 text-white flex justify-evenly">
-    <h1>Index Page</h1>
-    <NuxtLink to="/fullPage"> Full Page</NuxtLink>
-  </div>
+  <FullScreenScroll/>
 </template>
 
 <script>
