@@ -1,88 +1,3 @@
-<script>
-export default {
-  data() {
-    return {
-      inMove: false,
-      inMoveDelay: 200,
-      activeSection: 0,
-      offsets: [],
-      touchStartY: 0,
-    };
-  },
-  mounted() {
-    console.log("Component Mounted");
-    this.calculateSectionOffsets();
-    console.log(this.offsets);
-    window.addEventListener("scroll", this.handleMouseWheelDOM);
-    document.onmousewheel = this.handleMouseWheelDOM;
-  },
-  methods: {
-    calculateSectionOffsets() {
-      let sections = document.getElementsByTagName("section");
-      let length = sections.length;
-
-      for (let i = 0; i < length; i++) {
-        let sectionOffset = sections[i].offsetTop;
-        this.offsets.push(sectionOffset);
-      }
-    },
-    handleMouseWheelDOM: function (event) {
-      event.preventDefault();
-      console.log(Math.floor(event.pageY / window.innerWidth));
-      let section =
-        document.getElementsByTagName("section")[
-          Math.floor(event.pageY / window.innerWidth)
-        ];
-      if (section) {
-        document
-          .getElementsByTagName("section")
-          [Math.floor(event.pageY / window.innerWidth)].scrollIntoView({
-            behavior: "smooth",
-          });
-      }
-
-      setTimeout(() => {
-        this.inMove = false;
-      }, this.inMoveDelay);
-    },
-    moveDown() {
-      if (this.activeSection < this.offsets.length && this.activeSection > 0) {
-        this.activeSection--;
-        console.log(this.activeSection);
-        let section =
-          document.getElementsByTagName("section")[this.activeSection];
-        if (section) {
-          document
-            .getElementsByTagName("section")
-            [this.activeSection].scrollIntoView({ behavior: "smooth" });
-        }
-
-        setTimeout(() => {
-          this.inMove = false;
-        }, this.inMoveDelay);
-      }
-    },
-    moveUp() {
-      if (this.activeSection >= 0 && this.activeSection < this.offsets.length) {
-        this.activeSection++;
-        console.log(this.activeSection);
-        let section =
-          document.getElementsByTagName("section")[this.activeSection];
-        if (section) {
-          document
-            .getElementsByTagName("section")
-            [this.activeSection].scrollIntoView({ behavior: "smooth" });
-        }
-
-        setTimeout(() => {
-          this.inMove = false;
-        }, this.inMoveDelay);
-      }
-    },
-  },
-};
-</script>
-
 <template>
   <div class="overflow-hidden">
     <div class="fixed inset-3">
@@ -174,6 +89,91 @@ export default {
     </section>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      inMove: false,
+      inMoveDelay: 200,
+      activeSection: 0,
+      offsets: [],
+      touchStartY: 0,
+    };
+  },
+  mounted() {
+    console.log("Component Mounted");
+    this.calculateSectionOffsets();
+    console.log(this.offsets);
+    window.addEventListener("scroll", this.handleMouseWheelDOM);
+    document.onmousewheel = this.handleMouseWheelDOM;
+  },
+  methods: {
+    calculateSectionOffsets() {
+      let sections = document.getElementsByTagName("section");
+      let length = sections.length;
+
+      for (let i = 0; i < length; i++) {
+        let sectionOffset = sections[i].offsetTop;
+        this.offsets.push(sectionOffset);
+      }
+    },
+    handleMouseWheelDOM: function (event) {
+      event.preventDefault();
+      console.log(Math.floor(event.pageY / window.innerWidth));
+      let section =
+        document.getElementsByTagName("section")[
+          Math.floor(event.pageY / window.innerWidth)
+        ];
+      if (section) {
+        document
+          .getElementsByTagName("section")
+          [Math.floor(event.pageY / window.innerWidth)].scrollIntoView({
+            behavior: "smooth",
+          });
+      }
+
+      setTimeout(() => {
+        this.inMove = false;
+      }, this.inMoveDelay);
+    },
+    moveDown() {
+      if (this.activeSection < this.offsets.length && this.activeSection > 0) {
+        this.activeSection--;
+        console.log(this.activeSection);
+        let section =
+          document.getElementsByTagName("section")[this.activeSection];
+        if (section) {
+          document
+            .getElementsByTagName("section")
+            [this.activeSection].scrollIntoView({ behavior: "smooth" });
+        }
+
+        setTimeout(() => {
+          this.inMove = false;
+        }, this.inMoveDelay);
+      }
+    },
+    moveUp() {
+      if (this.activeSection >= 0 && this.activeSection < this.offsets.length) {
+        this.activeSection++;
+        console.log(this.activeSection);
+        let section =
+          document.getElementsByTagName("section")[this.activeSection];
+        if (section) {
+          document
+            .getElementsByTagName("section")
+            [this.activeSection].scrollIntoView({ behavior: "smooth" });
+        }
+
+        setTimeout(() => {
+          this.inMove = false;
+        }, this.inMoveDelay);
+      }
+    },
+  },
+};
+</script>
 
 <style scoped>
 .welcome-title {
