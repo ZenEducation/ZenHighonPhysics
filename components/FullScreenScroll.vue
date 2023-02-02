@@ -3,13 +3,13 @@
     <div class="fixed inset-3">
       <button
         class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l left-0 right-0"
-        v-on:click="moveDown"
+        v-on:click="moveUp"
       >
         Prev
       </button>
       <button
         class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-r"
-        v-on:click="moveUp"
+        v-on:click="moveDown"
       >
         Next
       </button>
@@ -137,38 +137,34 @@ export default {
         this.inMove = false;
       }, this.inMoveDelay);
     },
-    moveDown() {
+    moveUp() {
       if (this.activeSection < this.offsets.length && this.activeSection > 0) {
         this.activeSection--;
         console.log(this.activeSection);
         let section =
           document.getElementsByTagName("section")[this.activeSection];
         if (section) {
-          document
-            .getElementsByTagName("section")
-            [this.activeSection].scrollIntoView({ behavior: "smooth" });
+          section.scrollIntoView({ behavior: "smooth" });
         }
 
-        setTimeout(() => {
-          this.inMove = false;
-        }, this.inMoveDelay);
+        // setTimeout(() => {
+        //   this.inMove = false;
+        // }, this.inMoveDelay);
       }
     },
-    moveUp() {
+    moveDown() {
       if (this.activeSection >= 0 && this.activeSection < this.offsets.length) {
         this.activeSection++;
         console.log(this.activeSection);
         let section =
           document.getElementsByTagName("section")[this.activeSection];
         if (section) {
-          document
-            .getElementsByTagName("section")
-            [this.activeSection].scrollIntoView({ behavior: "smooth" });
+          section.scrollIntoView({ behavior: "smooth" });
         }
 
-        setTimeout(() => {
-          this.inMove = false;
-        }, this.inMoveDelay);
+        // setTimeout(() => {
+        //   this.inMove = false;
+        // }, this.inMoveDelay);
       }
     },
   },
