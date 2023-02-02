@@ -155,6 +155,7 @@ export default {
     moveDown() {
       if (this.activeSection >= 0 && this.activeSection < this.offsets.length) {
         this.activeSection++;
+
         console.log(this.activeSection);
         let section =
           document.getElementsByTagName("section")[this.activeSection];
@@ -165,6 +166,12 @@ export default {
         // setTimeout(() => {
         //   this.inMove = false;
         // }, this.inMoveDelay);
+      } else if (this.activeSection >= this.offsets.length) {
+        this.activeSection = 0;
+        let section =
+          document.getElementsByTagName("section")[this.activeSection];
+        section.scrollIntoView({ behavior: "smooth" });
+      } else {
       }
     },
   },
