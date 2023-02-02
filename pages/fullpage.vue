@@ -1,0 +1,3 @@
+<template>
+  <SectionScroll></SectionScroll>
+</template>

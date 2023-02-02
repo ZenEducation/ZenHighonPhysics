@@ -1,5 +1,7 @@
 <template>
+
     <ProfileCard/>
+<FloatingAvatar> </FloatingAvatar>
 </template>
   
   <script>
@@ -20,5 +22,7 @@
   };
   </script>
   
-  <style lang="scss" scoped></style>
+  <style scoped></style>
   
+
+

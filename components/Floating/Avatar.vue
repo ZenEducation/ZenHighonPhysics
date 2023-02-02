@@ -1,9 +1,9 @@
 <template>
-  <div class="styling">
+  <div class="flex justify-center">
     <div>
       <div class="container">
         <div class="avatar">
-          <a href="https://codepen.io/MarioDesigns/">
+          <a href="">
             <img
               id="img1"
               src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/751678/skytsunami.png"
@@ -11,58 +11,7 @@
             />
           </a>
         </div>
-        <div class="content">
-          <h1>Floating CSS animation</h1>
-          <p>Follow me on:</p>
-          <p id="spana">
-            <span
-              ><a
-                href="https://twitter.com/MDesignsuk"
-                id="imgcol"
-                target="_blank"
-                ><font-awesome-icon icon="fa-brands fa-twitter"
-              /></a>
-            </span>
-            <span
-              ><a
-                href="https://github.com/Mario-Duarte/"
-                id="imgcol"
-                target="_blank"
-                ><font-awesome-icon
-                  icon="fa-brands fa-github"
-                ></font-awesome-icon></a
-            ></span>
-            <span
-              ><a
-                href="https://bitbucket.org/Mario_Duarte/"
-                id="imgcol"
-                target="_blank"
-                ><font-awesome-icon
-                  icon="fa-brands fa-bitbucket"
-                ></font-awesome-icon></a
-            ></span>
-            <span
-              ><a
-                href="https://codepen.io/MarioDesigns/"
-                id="imgcol"
-                target="_blank"
-                ><font-awesome-icon
-                  icon="fa-brands fa-codepen"
-                ></font-awesome-icon></a
-            ></span>
-          </p>
-          <p>BY: Mario Duarte</p>
-        </div>
       </div>
-
-      <a
-        class="suppoprt-me"
-        href="https://www.buymeacoffee.com/marioduarte"
-        target="_blank"
-        ><img
-          id="img1"
-          src="https://img.buymeacoffee.com/button-api/?text=Buy me a Coffee&nbsp&emoji=&slug=marioduarte&button_colour=FF5F5F&font_colour=ffffff&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00"
-      /></a>
     </div>
   </div>
 </template>
