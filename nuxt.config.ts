@@ -1,10 +1,9 @@
 export default defineNuxtConfig({
   srcDir: "./",
-  css: ["@/assets/css/main.css"],
-
+  css: ["@/assets/css/main.css" , '@fortawesome/fontawesome-svg-core/styles.css'],
   modules: [
-    // ...
     [
+      
       "@pinia/nuxt",
       {
         autoImports: [
@@ -15,7 +14,9 @@ export default defineNuxtConfig({
         ],
       },
     ],
+    
   ],
+  
   //buildModules: ["@pinia/nuxt"],
   alias: {
     "./runtimeConfig": "./runtimeConfig.browser",
