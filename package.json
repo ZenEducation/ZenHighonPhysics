@@ -39,6 +39,7 @@
     "readable-stream": "^4.2.0",
     "rollup-plugin-node-polyfills": "^0.2.1",
     "uuid4": "^2.0.3",
-    "vue": "^3.2.33"
+    "vue": "^3.2.33",
+    "vue-scroll-snap": "^0.1.11"
   }
 }
