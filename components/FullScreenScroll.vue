@@ -1,23 +1,27 @@
 <template>
   <vue-scroll-snap :fullscreen="true">
     <div class="fixed">
-        <button
-          class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l left-0 right-0"
-          v-on:click="moveUp"
-        >
-          Prev
-        </button>
-        <button
-          class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-r"
-          v-on:click="moveDown"
-        >
-          Next
-        </button>
-        </div>
-    <section class="h-screen flex justify-center items-center flex-col bg-cyan-600 item">
+      <button
+        class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l left-0 right-0"
+        v-on:click="moveUp"
+      >
+        Prev
+      </button>
+      <button
+        class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-r"
+        v-on:click="moveDown"
+      >
+        Next
+      </button>
+    </div>
+    <section
+      class="h-screen flex justify-center items-center flex-col bg-cyan-600 item"
+    >
       <h1 class="font-bold text-2xl">Vue.js</h1>
     </section>
-    <section class="w-full h-screen flex justify-center items-center flex-col bg-violet-200 item">
+    <section
+      class="w-full h-screen flex justify-center items-center flex-col bg-violet-200 item"
+    >
       <h1 class="font-bold text-1xl text-center">
         ed ut perspiciatis unde omnis iste natus error sit voluptatem
         accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
@@ -34,7 +38,9 @@
         voluptas nulla pariatur?
       </h1>
     </section>
-    <section class="w-full h-screen flex justify-center items-center flex-col bg-violet-900 item">
+    <section
+      class="w-full h-screen flex justify-center items-center flex-col bg-violet-900 item"
+    >
       <h1 class="font-bold text-1xl text-center">
         ed ut perspiciatis unde omnis iste natus error sit voluptatem
         accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
@@ -53,15 +59,20 @@
     </section>
 
     <section class="w-full h-screen flex justify-center item">
-      <div class="w-1/2 h-screen flex justify-center items-center bg-yellow-600">
+      <div
+        id="LHS"
+        class="w-1/2 h-screen flex justify-center items-center bg-yellow-600"
+      >
         <h1 class="font-bold text-2xl items-center underline">
           Artificial intelligence
         </h1>
       </div>
 
-      <div class="w-1/2 h-screen bg-red-200 overflow-y-auto item">
+      <section id="RHS1" class="w-1/2 h-screen bg-red-200 overflow-y-auto item">
         <div class="w-full h-screen justify-center items-center bg-yellow-200">
-          <h1 class="font-bold text-1xl item center justify-content text-center indent-2.5">
+          <h1
+            class="font-bold text-1xl item center justify-content text-center indent-2.5"
+          >
             artificial intelligence (AI), the ability of a digital computer or
             computer-controlled robot to perform tasks commonly associated with
             intelligent beings. The term is frequently applied to the project of
@@ -79,7 +90,10 @@
           </h1>
         </div>
 
-        <section class="w-full h-screen justify-center items-center bg-pink-300">
+        <section
+          id="RHS2"
+          class="w-full h-screen justify-center items-center bg-pink-300"
+        >
           <h1 class="font-bold text-1xl text-center">
             On the other hand, some programs have attained the performance
             levels of human experts and professionals in performing certain
@@ -88,10 +102,12 @@
             computer search engines, and voice or handwriting recognition.
           </h1>
         </section>
-    </div>
+      </section>
     </section>
 
-    <section class="w-full h-screen flex justify-center items-center flex-col bg-violet-200 item">
+    <section
+      class="w-full h-screen flex justify-center items-center flex-col bg-violet-200 item"
+    >
       <h1 class="font-bold text-1xl text-center">
         ed ut perspiciatis unde omnis iste natus error sit voluptatem
         accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
@@ -108,8 +124,7 @@
         voluptas nulla pariatur?
       </h1>
     </section>
-
-</vue-scroll-snap>
+  </vue-scroll-snap>
 </template>
 
 <script>
@@ -122,8 +137,8 @@ export default {
       offsets: [],
     };
   },
-  components: {VueScrollSnap},
-  name:'FullScreenScroll',
+  components: { VueScrollSnap },
+  name: "FullScreenScroll",
   mounted() {
     console.log("Component Mounted");
     this.calculateSectionOffsets();
@@ -143,23 +158,26 @@ export default {
       if (this.activeSection < this.offsets.length && this.activeSection > 0) {
         this.activeSection--;
         console.log(this.activeSection);
-        let section = document.getElementsByTagName("section")[this.activeSection];
+        let section =
+          document.getElementsByTagName("section")[this.activeSection];
         if (section) {
           section.scrollIntoView({ behavior: "smooth" });
         }
       }
-    
     },
     moveDown() {
-      if (this.activeSection >= 0 && this.activeSection < this.offsets.length-1) {
+      if (
+        this.activeSection >= 0 &&
+        this.activeSection < this.offsets.length - 1
+      ) {
         this.activeSection++;
         console.log(this.activeSection);
-        let section =document.getElementsByTagName("section")[this.activeSection];
+        let section =
+          document.getElementsByTagName("section")[this.activeSection];
         if (section) {
           section.scrollIntoView({ behavior: "smooth" });
         }
       }
-    
     },
   },
 };
@@ -171,5 +189,4 @@ export default {
   display: flex;
   justify-content: center;
 }
-
 </style>
