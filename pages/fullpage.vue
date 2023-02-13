@@ -1,7 +1,7 @@
 <template>
-  <div class="bg-gray-900 text-white flex justify-center text-lg">
-    <h1>Hello from My Page</h1>
-  </div>
+
+  <FullScreenScroll/>
+
 </template>
 
 <script>
