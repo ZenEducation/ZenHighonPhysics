@@ -1,5 +1,11 @@
 <template>
-  <div></div>
+
+<div class="py-4 flex justify-evenly bg-gray-900 text-white">
+    <NuxtLink to="/">Index Page</NuxtLink>
+    <NuxtLink to="/testimonials"> Testimonials Grid Section</NuxtLink>
+  </div>
+
+
 </template>
 
 <script>
