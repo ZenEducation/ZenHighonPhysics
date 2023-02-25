@@ -2,10 +2,10 @@
   <vue-scroll-snap :fullscreen="true">
     <div class="top-1/2 fixed right-9 flex flex-col gap-5">
       <span
-        class="active:scale-150 w-4 h-4 bg-pink-500 rounded-sm block cursor-pointer opacity-60 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-100"
+        class="w-4 h-4 bg-pink-500 rounded-md block cursor-pointer transition ease-in-out delay-150 hover:border-2 hover:border-pink-400 hover:bg-pink-500 hover:opacity-100 duration-100"
         :class="[
           { active: this.activeSection == index },
-          { 'scale-150': this.activeSection == index },
+          { 'border-pink-600 border-4 scale-150': this.activeSection == index },
         ]"
         v-on:click="scrollToSection(index)"
         v-for="(offset, index) in offsets"
