@@ -1,10 +1,9 @@
 <template>
-  <vue-scroll-snap :fullscreen="true">
+  <vue-scroll-snap :fullscreen="true" class="aside-scrollbars-gray">
     <div class="top-1/2 fixed right-9 flex flex-col gap-5">
       <span
         class="w-4 h-4 bg-pink-500 rounded-md block cursor-pointer transition ease-in-out hover:scale-150 duration-100"
         :class="[
-          { active: this.activeSection == index },
           { 'border-pink-600 border-4 scale-150': this.activeSection == index },
         ]"
         v-on:click="scrollToSection(index)"
@@ -21,6 +20,7 @@
         <h1 class="font-bold text-2xl">Vue.js</h1>
       </section>
       <section
+        ref="mySection"
         class="w-full h-screen flex justify-center items-center flex-col bg-violet-200 item"
       >
         <h1 class="font-bold text-1xl text-center max-w-6xl">
@@ -59,6 +59,7 @@ export default {
   mounted() {
     console.log("Component Mounted");
     this.calculateSectionOffsets();
+    this.scrollToSection(this.activeSection);
     console.log(this.offsets);
   },
   methods: {
