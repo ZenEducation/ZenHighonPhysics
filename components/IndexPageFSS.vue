@@ -1,8 +1,8 @@
 <template>
   <vue-scroll-snap :fullscreen="true">
-    <div class="sections-menu">
+    <div class="top-1/2 fixed right-9 flex flex-col gap-3">
       <span
-        class="menu-point"
+        class="w-4 h-4 bg-gray-700 block cursor-pointer opacity-60 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300"
         v-bind:class="{ active: this.activeSection == index }"
         v-on:click="scrollToSection(index)"
         v-for="(offset, index) in offsets"
@@ -11,69 +11,32 @@
       >
       </span>
     </div>
-    <section
-      class="h-screen flex justify-center items-center flex-col bg-cyan-600 item"
-    >
-      <h1 class="font-bold text-2xl">Vue.js</h1>
-    </section>
-    <section
-      class="w-full h-screen flex justify-center items-center flex-col bg-violet-200 item"
-    >
-      <h1 class="font-bold text-1xl text-center">
-        ed ut perspiciatis unde omnis iste natus error sit voluptatem
-        accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
-        illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-        explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-        odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-        voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum
-        quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam
-        eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
-        voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam
-        corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
-        Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse
-        quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo
-        voluptas nulla pariatur?
-      </h1>
-    </section>
-    <section
-      class="w-full h-screen flex justify-center items-center flex-col bg-violet-900 item"
-    >
-      <h1 class="font-bold text-1xl text-center">
-        ed ut perspiciatis unde omnis iste natus error sit voluptatem
-        accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
-        illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-        explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-        odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-        voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum
-        quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam
-        eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
-        voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam
-        corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
-        Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse
-        quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo
-        voluptas nulla pariatur?
-      </h1>
-    </section>
-
-    <section
-      class="w-full h-screen flex justify-center items-center flex-col bg-violet-200 item"
-    >
-      <h1 class="font-bold text-1xl text-center">
-        ed ut perspiciatis unde omnis iste natus error sit voluptatem
-        accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
-        illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-        explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-        odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-        voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum
-        quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam
-        eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
-        voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam
-        corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
-        Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse
-        quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo
-        voluptas nulla pariatur?
-      </h1>
-    </section>
+    <div class="container flex flex-col justify-center items-center min-w-full">
+      <section
+        class="h-screen min-w-full flex justify-center items-center flex-col bg-yellow-300 item"
+      >
+        <h1 class="font-bold text-2xl">Vue.js</h1>
+      </section>
+      <section
+        class="w-full h-screen flex justify-center items-center flex-col bg-violet-200 item"
+      >
+        <h1 class="font-bold text-1xl text-center">
+          ed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
+          ab illo inventore veritatis et quasi architecto beatae vitae dicta
+          sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+          aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos
+          qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui
+          dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed
+          quia non numquam eius modi tempora incidunt ut labore et dolore magnam
+          aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
+          exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex
+          ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in
+          ea voluptate velit esse quam nihil molestiae consequatur, vel illum
+          qui dolorem eum fugiat quo voluptas nulla pariatur?
+        </h1>
+      </section>
+    </div>
   </vue-scroll-snap>
 </template>
 
@@ -140,7 +103,7 @@ export default {
 .sections-menu .menu-point {
   width: 10px;
   height: 10px;
-  background-color: #d93535;
+  background-color: #560e0e;
   display: block;
   margin: 1rem 0;
   opacity: 0.6;
