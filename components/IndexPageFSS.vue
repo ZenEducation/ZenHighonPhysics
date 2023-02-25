@@ -2,7 +2,7 @@
   <vue-scroll-snap :fullscreen="true">
     <div class="top-1/2 fixed right-9 flex flex-col gap-5">
       <span
-        class="w-4 h-4 bg-pink-500 rounded-md block cursor-pointer transition ease-in-out delay-150 hover:border-2 hover:border-pink-400 hover:bg-pink-500 hover:opacity-100 duration-100"
+        class="w-4 h-4 bg-pink-500 rounded-md block cursor-pointer transition ease-in-out hover:scale-150 duration-100"
         :class="[
           { active: this.activeSection == index },
           { 'border-pink-600 border-4 scale-150': this.activeSection == index },
