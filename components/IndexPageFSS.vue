@@ -90,37 +90,4 @@ export default {
 };
 </script>
 
-<style scoped>
-.welcome-title {
-  height: 200vh;
-  display: flex;
-  justify-content: center;
-}
-.sections-menu {
-  position: fixed;
-  right: 2rem;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.sections-menu .menu-point {
-  width: 10px;
-  height: 10px;
-  background-color: #560e0e;
-  display: block;
-  margin: 1rem 0;
-  opacity: 0.6;
-  transition: 0.4s ease-in-out all;
-  cursor: pointer;
-}
-
-.sections-menu .menu-point.active {
-  opacity: 1;
-  transform: scale(1.5);
-}
-
-.sections-menu .menu-point:hover {
-  opacity: 1;
-  transform: scale(1.2);
-}
-</style>
+<style scoped></style>
