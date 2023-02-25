@@ -1,9 +1,12 @@
 <template>
   <vue-scroll-snap :fullscreen="true">
-    <div class="top-1/2 fixed right-9 flex flex-col gap-3">
+    <div class="top-1/2 fixed right-9 flex flex-col gap-5">
       <span
-        class="w-4 h-4 bg-gray-700 block cursor-pointer opacity-60 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300"
-        v-bind:class="{ active: this.activeSection == index }"
+        class="active:scale-150 w-4 h-4 bg-pink-500 rounded-sm block cursor-pointer opacity-60 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-100"
+        :class="[
+          { active: this.activeSection == index },
+          { 'scale-150': this.activeSection == index },
+        ]"
         v-on:click="scrollToSection(index)"
         v-for="(offset, index) in offsets"
         v-bind:key="index"
@@ -20,7 +23,7 @@
       <section
         class="w-full h-screen flex justify-center items-center flex-col bg-violet-200 item"
       >
-        <h1 class="font-bold text-1xl text-center">
+        <h1 class="font-bold text-1xl text-center max-w-6xl">
           ed ut perspiciatis unde omnis iste natus error sit voluptatem
           accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
           ab illo inventore veritatis et quasi architecto beatae vitae dicta
